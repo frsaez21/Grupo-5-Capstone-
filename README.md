@@ -1,6 +1,6 @@
 # Capstone - Grupo 5
 
-Repositorio dedicado a la información del proyecto.
+Repositorio del proyecto LBWUS alojado en GitHub, utilizado para gestionar los archivos del proyecto, mantener el historial de cambios y administrar el control de versiones durante su desarrollo.
 
 # LBWUS — Learn Better With Us
 
@@ -9,6 +9,8 @@ Una plataforma de autoaprendizaje colaborativo donde profesores y estudiantes se
 ## ¿Qué es LBWUS?
 
 LBWUS es una aplicación web de autoaprendizaje desarrollada como proyecto universitario. Está pensada para construir una comunidad educativa inclusiva donde tanto profesores como estudiantes pueden unirse para compartir conocimiento, acceder a clases y ser parte de una comunidad que cree en el aprendizaje continuo.
+
+El proyecto utiliza **GitHub como repositorio para la gestión del código, la documentación y el control de versiones**, permitiendo registrar los cambios realizados, mantener la trazabilidad del desarrollo y facilitar el trabajo colaborativo de los integrantes del equipo.
 
 ## Funcionalidades
 
@@ -52,13 +54,12 @@ Estas capacidades se desarrollan progresivamente. La descripción de la propuest
 | Lenguaje principal | Python 3.13 | Desarrollo del backend. |
 | Framework web | Django 5.0.6 | Vistas, plantillas, autenticación y lógica de la aplicación. |
 | Frontend | HTML, CSS y JavaScript | Interfaz de usuario y presentación de contenido. |
-| Base de datos de producción | PostgreSQL | Persistencia de datos relacionales y transaccionales. |
-| Base de datos local | SQLite | Desarrollo y pruebas locales. |
+| Base de datos principal | PostgreSQL | Persistencia de datos relacionales y transaccionales. |
 | Datos documentales previstos | MongoDB Atlas | Interacciones y contenido social del producto; adopción funcional progresiva. |
 | Servidor WSGI | Gunicorn | Ejecución de Django en el despliegue. |
 | Archivos estáticos | WhiteNoise | Entrega de archivos estáticos. |
 | Infraestructura | Railway | Despliegue de la plataforma web. |
-| Control de versiones | Git y GitHub | Gestión y trazabilidad de cambios. |
+| Repositorio y control de versiones | Git y GitHub | Almacenamiento y gestión del proyecto, colaboración, historial y trazabilidad de cambios. |
 | Pagos | Transbank / Webpay Plus | Integración documentada en ambiente de pruebas. |
 
 **Nota sobre las versiones:** las versiones de Python y Django deben verificarse en el entorno de desarrollo y en `requirements.txt` antes de considerarse definitivas.
@@ -71,8 +72,10 @@ LBWUS utiliza una arquitectura web basada en Django, siguiendo el patrón **Mode
 
 El modelo de datos documentado distingue dos responsabilidades:
 
-- **PostgreSQL:** almacenamiento relacional y transaccional en producción, incluyendo cuentas de usuario, perfiles, clases, inscripciones, reportes y solicitudes de retiro. En desarrollo local se utiliza SQLite.
+- **PostgreSQL:** almacenamiento relacional y transaccional principal, incluyendo cuentas de usuario, perfiles, clases, inscripciones, reportes y solicitudes de retiro.
 - **MongoDB Atlas:** almacenamiento documental previsto para actividad, notificaciones, reseñas, conversaciones y mensajes. El esquema de estas cinco colecciones está documentado; su uso funcional se incorpora de manera progresiva.
+
+El proyecto utiliza **GitHub como repositorio de control de versiones**, donde se registra el historial de modificaciones y se facilita la colaboración entre los integrantes del equipo. La aplicación se despliega mediante Railway.
 
 ### Diagrama de arquitectura
 
@@ -82,8 +85,7 @@ flowchart TB
     FE["Frontend: HTML, CSS, JavaScript y templates Django"]
     DJ["Backend: Python / Django · vistas, autenticación y reglas de negocio"]
     ORM["Django ORM"]
-    PG["PostgreSQL · producción"]
-    SQL["SQLite · desarrollo local"]
+    PG["PostgreSQL · base de datos principal"]
     PY["PyMongo / app de comunidad · integración progresiva"]
     MDB["MongoDB Atlas · colecciones documentales"]
     TB["Transbank Webpay Plus · ambiente de pruebas"]
@@ -93,7 +95,6 @@ flowchart TB
     U --> FE --> DJ
     DJ --> ORM
     ORM --> PG
-    ORM -. "Alternativa local" .-> SQL
     DJ -. "Integración progresiva" .-> PY
     PY -.-> MDB
     DJ --> TB
@@ -101,7 +102,7 @@ flowchart TB
     RW --> DJ
 ```
 
-**Lectura del diagrama:** las líneas continuas representan las conexiones descritas como parte de la arquitectura de la aplicación; las líneas discontinuas identifican alternativas de entorno o componentes cuya integración funcional es progresiva. No debe interpretarse que PostgreSQL y SQLite se utilizan simultáneamente en un mismo entorno.
+**Lectura del diagrama:** las líneas continuas representan las conexiones descritas como parte de la arquitectura de la aplicación; las líneas discontinuas identifican componentes cuya integración funcional es progresiva o relaciones de despliegue. GitHub se utiliza para gestionar el repositorio y el historial de cambios, mientras que Railway ejecuta la aplicación desplegada.
 
 ### Componentes y responsabilidades
 
@@ -110,11 +111,10 @@ flowchart TB
 | Interfaz web | Presentar páginas, formularios y vistas para los distintos tipos de usuario. |
 | Django | Resolver solicitudes, aplicar reglas del negocio y gestionar permisos y autenticación. |
 | ORM de Django | Gestionar el acceso a los modelos relacionales. |
-| PostgreSQL | Persistir la información estructurada del sistema en producción. |
-| SQLite | Permitir la ejecución y el desarrollo local sin depender de la base de producción. |
+| PostgreSQL | Persistir la información estructurada y transaccional del sistema. |
 | MongoDB Atlas | Recibir datos documentales de interacción cuando los módulos respectivos estén integrados. |
 | Railway | Alojar y ejecutar la aplicación desplegada. |
-| GitHub | Registrar el código, las modificaciones y la colaboración del equipo. |
+| Git y GitHub | Gestionar el repositorio del proyecto, controlar versiones, mantener el historial de modificaciones y facilitar el desarrollo colaborativo. |
 | Transbank | Procesar el flujo de pagos en el ambiente de integración documentado. |
 
 ### Modelo de datos e integridad
@@ -136,15 +136,17 @@ Esta distinción evita presentar funcionalidades proyectadas como si ya estuvier
 - Python 3.13+
 - `pip`
 - Git
+- PostgreSQL
+- Acceso a las variables de entorno requeridas por el proyecto.
 
 ### Procedimiento de referencia
 
-La instalación debe ejecutarse desde el repositorio que contiene el código Django de la aplicación. El repositorio de documentación no sustituye al repositorio de código.
+La instalación debe ejecutarse desde el directorio que contiene el código Django de la aplicación, utilizando la versión correspondiente del proyecto gestionada mediante GitHub.
 
-1. Clonar el repositorio de código y seleccionar la rama de trabajo correspondiente.
+1. Clonar el repositorio de código desde GitHub y seleccionar la rama de trabajo correspondiente.
 2. Crear y activar un entorno virtual de Python.
 3. Instalar las dependencias definidas en `requirements.txt`.
-4. Configurar las variables de entorno necesarias sin incluir secretos en GitHub.
+4. Configurar las variables de entorno necesarias, incluyendo la conexión a PostgreSQL, sin incorporar credenciales ni secretos al repositorio.
 5. Ejecutar las migraciones y levantar el servidor de desarrollo.
 
 Comandos de referencia, ejecutados desde la raíz del proyecto Django y después de activar el entorno virtual:
@@ -173,7 +175,7 @@ El proyecto se estructura mediante los siguientes elementos:
 
 Para la gestión y seguimiento del proyecto se utiliza **Jira**, herramienta que permite administrar el Product Backlog, organizar los Sprints, visualizar los estados de las actividades y mantener la trazabilidad de los avances.
 
-Complementariamente, se utiliza **Git y GitHub** para el control de versiones, la colaboración en el desarrollo y el registro de las modificaciones realizadas.
+Complementariamente, se utiliza **Git y GitHub** para administrar el repositorio del proyecto, gestionar las versiones del código y la documentación, facilitar el trabajo colaborativo y mantener un historial de los cambios realizados durante el desarrollo.
 
 La aplicación de Scrum permite mantener un enfoque colaborativo, priorizar funcionalidades de acuerdo con el valor que aportan y realizar ajustes durante el desarrollo sin depender de una planificación rígida de todas las actividades desde el inicio.
 
