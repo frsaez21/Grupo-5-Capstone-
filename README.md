@@ -156,3 +156,41 @@ python manage.py runserver
 ```
 
 La configuración específica de PostgreSQL, MongoDB, servicios externos y demás variables de entorno debe seguir la documentación técnica y las instrucciones vigentes del repositorio de código.
+
+## Metodología de trabajo
+
+LBWUS utiliza **Scrum** como marco de trabajo ágil para desarrollar el producto de manera iterativa e incremental, permitiendo organizar las actividades, realizar entregas progresivas y adaptar las prioridades de acuerdo con los resultados obtenidos.
+
+El proyecto se estructura mediante los siguientes elementos:
+
+- **Product Backlog:** conjunto priorizado de requisitos, historias de usuario, funcionalidades y mejoras pendientes del producto.
+- **Sprint Backlog:** selección de elementos del Product Backlog que el equipo se compromete a desarrollar durante cada Sprint, junto con el plan necesario para alcanzar su objetivo.
+- **Sprints:** iteraciones de dos semanas, equivalentes a 10 días hábiles, orientadas a desarrollar y validar incrementos del producto.
+- **Sprint Planning:** planificación del objetivo y trabajo de cada Sprint, considerando las prioridades del producto y la capacidad del equipo.
+- **Daily Scrum:** instancia breve de inspección del progreso hacia el objetivo del Sprint y adaptación del plan de trabajo.
+- **Sprint Review:** revisión de los resultados y del incremento desarrollado, permitiendo obtener retroalimentación y ajustar las prioridades.
+- **Sprint Retrospective:** instancia para identificar oportunidades de mejora en la colaboración, las prácticas técnicas y la organización del equipo.
+
+Para la gestión y seguimiento del proyecto se utiliza **Jira**, herramienta que permite administrar el Product Backlog, organizar los Sprints, visualizar los estados de las actividades y mantener la trazabilidad de los avances.
+
+Complementariamente, se utiliza **Git y GitHub** para el control de versiones, la colaboración en el desarrollo y el registro de las modificaciones realizadas.
+
+La aplicación de Scrum permite mantener un enfoque colaborativo, priorizar funcionalidades de acuerdo con el valor que aportan y realizar ajustes durante el desarrollo sin depender de una planificación rígida de todas las actividades desde el inicio.
+
+## Roles y responsabilidades del equipo
+
+El equipo de LBWUS se organiza de acuerdo con las responsabilidades establecidas en Scrum, promoviendo la colaboración y la participación de sus integrantes durante el desarrollo del proyecto.
+
+| Integrante | Rol Scrum | Responsabilidades principales |
+| --- | --- | --- |
+| **Francheska Cisterna Porras** | **Scrum Master** | Facilitar la aplicación de Scrum, coordinar el seguimiento del trabajo, apoyar la resolución de impedimentos, promover la colaboración del equipo y mantener la trazabilidad de avances y evidencias. |
+| **Benjamín Nicovani Moya** | **Product Owner** | Gestionar y priorizar el Product Backlog, clarificar los requisitos, definir criterios de aceptación y orientar el desarrollo hacia las necesidades de los usuarios y los objetivos del producto. |
+| **Franco Sáez Martínez** | **Developer** | Participar en el desarrollo técnico de la plataforma, la implementación de funcionalidades, el backend, la persistencia de datos, las integraciones y las pruebas del sistema. |
+
+### Trabajo colaborativo
+
+Si bien cada integrante desempeña responsabilidades específicas dentro de Scrum, el desarrollo de LBWUS se realiza mediante un enfoque colaborativo.
+
+Los integrantes participan transversalmente en actividades de análisis de requisitos, diseño, desarrollo frontend y backend, gestión de datos, pruebas, documentación técnica y validación de funcionalidades, según las necesidades y prioridades de cada Sprint.
+
+Los roles de Scrum no representan una división exclusiva de las actividades técnicas, sino responsabilidades complementarias que permiten mejorar la coordinación, organización y entrega de valor del proyecto.
