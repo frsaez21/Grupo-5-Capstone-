@@ -56,6 +56,7 @@ Estas capacidades se desarrollan progresivamente. La descripción de la propuest
 | Frontend | HTML, CSS y JavaScript | Interfaz de usuario y presentación de contenido. |
 | Base de datos principal | PostgreSQL | Persistencia de datos relacionales y transaccionales. |
 | Datos documentales previstos | MongoDB Atlas | Interacciones y contenido social del producto; adopción funcional progresiva. |
+| Pruebas | pytest | Ejecución de pruebas automatizadas del sistema. |
 | Servidor WSGI | Gunicorn | Ejecución de Django en el despliegue. |
 | Archivos estáticos | WhiteNoise | Entrega de archivos estáticos. |
 | Infraestructura | Railway | Despliegue de la plataforma web. |
@@ -63,6 +64,8 @@ Estas capacidades se desarrollan progresivamente. La descripción de la propuest
 | Pagos | Transbank / Webpay Plus | Integración documentada en ambiente de pruebas. |
 
 **Nota sobre las versiones:** las versiones de Python y Django deben verificarse en el entorno de desarrollo y en `requirements.txt` antes de considerarse definitivas.
+
+**Nota sobre contenedores:** el proyecto **no utiliza Docker**. No se incluyen archivos `Dockerfile` ni `docker-compose`; el entorno local se gestiona mediante un entorno virtual de Python y la aplicación se despliega directamente en Railway.
 
 ## Arquitectura del sistema
 
@@ -113,6 +116,7 @@ flowchart TB
 | ORM de Django | Gestionar el acceso a los modelos relacionales. |
 | PostgreSQL | Persistir la información estructurada y transaccional del sistema. |
 | MongoDB Atlas | Recibir datos documentales de interacción cuando los módulos respectivos estén integrados. |
+| pytest | Ejecutar las pruebas automatizadas y verificar el comportamiento de las funcionalidades. |
 | Railway | Alojar y ejecutar la aplicación desplegada. |
 | Git y GitHub | Gestionar el repositorio del proyecto, controlar versiones, mantener el historial de modificaciones y facilitar el desarrollo colaborativo. |
 | Transbank | Procesar el flujo de pagos en el ambiente de integración documentado. |
@@ -139,6 +143,8 @@ Esta distinción evita presentar funcionalidades proyectadas como si ya estuvier
 - PostgreSQL
 - Acceso a las variables de entorno requeridas por el proyecto.
 
+El proyecto no requiere Docker para su instalación ni ejecución local.
+
 ### Procedimiento de referencia
 
 La instalación debe ejecutarse desde el directorio que contiene el código Django de la aplicación, utilizando la versión correspondiente del proyecto gestionada mediante GitHub.
@@ -158,6 +164,16 @@ python manage.py runserver
 ```
 
 La configuración específica de PostgreSQL, MongoDB, servicios externos y demás variables de entorno debe seguir la documentación técnica y las instrucciones vigentes del repositorio de código.
+
+## Pruebas
+
+Las pruebas automatizadas del proyecto se ejecutan con **pytest**. Para correrlas, desde la raíz del proyecto Django y con el entorno virtual activado:
+
+```bash
+pytest
+```
+
+Las pruebas permiten verificar el comportamiento de las funcionalidades desarrolladas en cada Sprint y detectar regresiones antes de integrar cambios al repositorio.
 
 ## Metodología de trabajo
 
