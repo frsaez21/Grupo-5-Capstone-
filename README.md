@@ -1,24 +1,49 @@
 # Capstone - Grupo 5
 
-Repositorio del proyecto LBWUS alojado en GitHub, utilizado para gestionar los archivos del proyecto, mantener el historial de cambios y administrar el control de versiones durante su desarrollo.
+Repositorio académico de **LBWUS — Learn Better With Us**, desarrollado como Proyecto APT de Ingeniería en Informática en Duoc UC por el Grupo 5. Reúne la documentación, la planificación Scrum y las evidencias incorporadas durante las fases de Capstone, conservando el historial de sus modificaciones.
+
+El código de la aplicación se mantiene en **[Haekz/Capstone](https://github.com/Haekz/Capstone)**. Las instrucciones de instalación y ejecución de este README corresponden a ese repositorio.
+
+**Actualización documental:** 16 de noviembre de 2026. Descripción técnica contrastada con `main` de la aplicación en el commit [`a96b0f2f30e9`](https://github.com/Haekz/Capstone/commit/a96b0f2f30e9cb10a0ebbde66b01ef52747ca0ec).
 
 # LBWUS — Learn Better With Us
 
-Una plataforma de autoaprendizaje colaborativo donde profesores y estudiantes se encuentran para enseñar, aprender y crecer juntos.
+Plataforma web de reforzamiento académico en múltiples asignaturas que facilita el encuentro entre estudiantes y profesores y reúne la contratación, coordinación y seguimiento de las tutorías.
 
 ## ¿Qué es LBWUS?
 
-LBWUS es una aplicación web de autoaprendizaje desarrollada como proyecto universitario. Está pensada para construir una comunidad educativa inclusiva donde tanto profesores como estudiantes pueden unirse para compartir conocimiento, acceder a clases y ser parte de una comunidad que cree en el aprendizaje continuo.
+LBWUS busca facilitar el acceso a apoyo académico para distintas necesidades de aprendizaje, centralizando la búsqueda de profesores, la consulta de sus antecedentes, la disponibilidad y la reserva de clases. La plataforma incorpora paquetes de tutorías, mensajería, videos de apoyo, notificaciones y seguimiento de la actividad académica.
 
-El proyecto utiliza **GitHub como repositorio para la gestión del código, la documentación y el control de versiones**, permitiendo registrar los cambios realizados, mantener la trazabilidad del desarrollo y facilitar el trabajo colaborativo de los integrantes del equipo.
+Para los profesores, ofrece un espacio para presentar sus especialidades y desarrollar su reputación mediante reseñas verificadas de estudiantes que han realizado clases. También contempla flujos de apoderados y estudiantes menores de edad, junto con herramientas de soporte y administración.
+
+El proyecto utiliza **Git y GitHub para el control de versiones**, diferenciando este repositorio documental del repositorio de código. Jira permite seguir el Product Backlog y los Sprints; las evidencias de QA y de integración continua respaldan los resultados de las pruebas.
+
+### Organización de este repositorio
+
+| Carpeta | Propósito |
+| --- | --- |
+| [Fase 1](Fase%201/) | Definición del proyecto, alcance, planificación y evidencias iniciales del equipo. |
+| [Fase 2](Fase%202/) | Entregables de desarrollo, seguimiento, documentación técnica, pruebas y retrospectivas incorporadas. |
+| [Fase 3](Fase%203/) | Carpeta destinada a los entregables de cierre y las evidencias finales de Capstone. |
 
 ## Funcionalidades
 
-- Registro e inicio de sesión para alumnos y profesores.
-- Portal de administración para gestión de usuarios.
-- Registro y gestión de alumnos.
-- Sistema de autenticación con roles diferenciados.
-- Interfaz web responsiva.
+La versión de código revisada incorpora los siguientes módulos y flujos:
+
+- **Cuentas y acceso por rol:** registro, autenticación, recuperación de cuentas y portales de alumnos, profesores, apoderados, soporte y administración.
+- **Perfiles y oferta académica:** asignaturas, especialidades y antecedentes de los profesores, con revisión de documentos para su habilitación.
+- **Planes y pagos:** paquetes de clases e integración con Transbank Webpay Plus, con registro de órdenes, estados y confirmaciones de pago.
+- **Agenda y reservas:** disponibilidad semanal del profesor, generación de sesiones, consulta de cupos, reservas, cancelaciones y reprogramaciones según las reglas del servicio.
+- **Clases y seguimiento:** acceso autorizado a salas virtuales, gestión de sesiones y observaciones del profesor.
+- **Mensajería y notificaciones:** conversaciones entre participantes autorizados, avisos en la plataforma y correos asociados a los flujos del sistema.
+- **Reseñas verificadas:** calificaciones vinculadas a clases realizadas y herramientas para reportar y moderar reseñas.
+- **Apoderados y menores:** revisión de identidad y vínculos, compras y gestión de clases por el apoderado, con permisos diferenciados.
+- **Videoteca:** carga de videos de apoyo por el profesor, almacenamiento mediante MongoDB/GridFS y entrega vinculada a paquetes.
+- **Soporte:** tickets, respuestas, asignación, escalamiento y revisión de solicitudes y reportes.
+- **Administración y finanzas:** gestión de usuarios y asignaturas, métricas, revisión de retiros y registro de su resolución.
+- **Privacidad y operación:** solicitudes de eliminación de cuenta y tareas diarias de mantenimiento.
+
+Esta lista describe capacidades implementadas en el código. La habilitación de servicios externos y de usuarios reales debe contrastarse con la configuración y las validaciones operativas documentadas en [Estado actual y evolución](#estado-actual-y-evolución).
 
 ## Innovación y propuesta de valor
 
@@ -34,16 +59,16 @@ El valor diferenciador propuesto se basa en la combinación de:
 
 - **Búsqueda y comparación en un mismo entorno:** acceso a perfiles profesionales y criterios de consulta relevantes para el estudiante.
 - **Confianza y control:** gestión de perfiles, acceso según roles y consideración de antecedentes o títulos profesionales en el proceso de habilitación.
-- **Continuidad del servicio:** evolución hacia disponibilidad, reservas, pagos, mensajería, notificaciones y reseñas, integrados en un mismo recorrido.
-- **Oportunidades para profesionales:** un canal digital para presentar especialidades y ofrecer apoyo académico.
+- **Continuidad del servicio:** disponibilidad, reservas, paquetes, pagos, mensajería, notificaciones y reseñas articulados en el recorrido de las tutorías.
+- **Oportunidades para profesionales:** un canal digital para presentar especialidades, ofrecer apoyo académico y fortalecer su reputación a partir de reseñas verificadas.
 
-Estas capacidades se desarrollan progresivamente. La descripción de la propuesta de valor no significa que todas las funcionalidades estén terminadas o disponibles en producción.
+La propuesta de valor se concreta en los módulos descritos en este README. Los pendientes de validación, configuración productiva y mejora se registran por separado para conservar la trazabilidad del estado del producto.
 
 ### Valor que aporta
 
-**Para estudiantes:** facilitar la identificación y comparación de alternativas de apoyo académico y reducir la dependencia de búsquedas dispersas.
+**Para estudiantes:** facilitar la identificación y comparación de alternativas de apoyo académico en múltiples asignaturas, organizar sus clases y atender distintas necesidades de reforzamiento.
 
-**Para profesores e ingenieros:** ofrecer mayor visibilidad de sus conocimientos, experiencia y servicios de tutoría.
+**Para profesores e ingenieros:** ofrecer mayor visibilidad de sus conocimientos, experiencia y servicios de tutoría, con antecedentes y reseñas que ayuden a los estudiantes a evaluar sus alternativas.
 
 **Para el proyecto:** construir una solución modular que pueda incorporar nuevas funcionalidades y validarlas gradualmente, de acuerdo con las necesidades de sus usuarios.
 
@@ -51,129 +76,189 @@ Estas capacidades se desarrollan progresivamente. La descripción de la propuest
 
 | Componente | Tecnología | Uso en LBWUS |
 | --- | --- | --- |
-| Lenguaje principal | Python 3.13 | Desarrollo del backend. |
-| Framework web | Django 5.0.6 | Vistas, plantillas, autenticación y lógica de la aplicación. |
-| Frontend | HTML, CSS y JavaScript | Interfaz de usuario y presentación de contenido. |
-| Base de datos principal | PostgreSQL | Persistencia de datos relacionales y transaccionales. |
-| Datos documentales previstos | MongoDB Atlas | Interacciones y contenido social del producto; adopción funcional progresiva. |
-| Pruebas | pytest | Ejecución de pruebas automatizadas del sistema. |
-| Servidor WSGI | Gunicorn | Ejecución de Django en el despliegue. |
-| Archivos estáticos | WhiteNoise | Entrega de archivos estáticos. |
-| Infraestructura | Railway | Despliegue de la plataforma web. |
-| Repositorio y control de versiones | Git y GitHub | Almacenamiento y gestión del proyecto, colaboración, historial y trazabilidad de cambios. |
-| Pagos | Transbank / Webpay Plus | Integración documentada en ambiente de pruebas. |
+| Lenguaje principal | Python 3.13 | Versión utilizada en el flujo de integración continua. |
+| Framework web | Django 5.2.18 | Vistas, plantillas, autenticación, modelos y reglas de negocio. |
+| Frontend | HTML, CSS y JavaScript | Interfaz web responsiva y templates de Django. |
+| Base de datos principal | PostgreSQL | Datos relacionales y transaccionales; PostgreSQL 16 en CI. |
+| Archivos de video | MongoDB Atlas y GridFS mediante PyMongo | Contenido binario y metadatos de los videos de apoyo. |
+| Pruebas | Runner de Django, pytest y mongomock | Pruebas automatizadas, herramientas de QA y simulación de MongoDB. |
+| Integración continua | GitHub Actions | Comprobación de Django y ejecución de la suite en cambios y pull requests. |
+| Servidor WSGI | Gunicorn 26.2.0 | Ejecución de Django en el despliegue. |
+| Archivos estáticos | WhiteNoise 6.12.0 | Entrega de archivos estáticos. |
+| Infraestructura | Railway | Despliegue de la aplicación y servicios asociados. |
+| Repositorio y control de versiones | Git y GitHub | Historial, colaboración y trazabilidad del código y la documentación. |
+| Gestión del trabajo | Jira | Product Backlog, Sprints y seguimiento de los avances. |
+| Pagos | Transbank Webpay Plus | Flujo de integración y configuración diferenciada para producción. |
 
-**Nota sobre las versiones:** las versiones de Python y Django deben verificarse en el entorno de desarrollo y en `requirements.txt` antes de considerarse definitivas.
+Las versiones de las dependencias de producción se fijan en [requirements.txt](https://github.com/Haekz/Capstone/blob/main/requirements.txt). Las herramientas de desarrollo y QA se encuentran en [requirements-dev.txt](https://github.com/Haekz/Capstone/blob/main/requirements-dev.txt). La versión de Python de CI se define en [tests.yml](https://github.com/Haekz/Capstone/blob/main/.github/workflows/tests.yml).
 
-**Nota sobre contenedores:** el proyecto **no utiliza Docker**. No se incluyen archivos `Dockerfile` ni `docker-compose`; el entorno local se gestiona mediante un entorno virtual de Python y la aplicación se despliega directamente en Railway.
+**Entorno local:** se utiliza un entorno virtual de Python y una base PostgreSQL. El código revisado no incluye archivos propios `Dockerfile` ni `docker-compose`; su instalación local no requiere Docker. GitHub Actions utiliza un servicio PostgreSQL 16 para las pruebas.
 
 ## Arquitectura del sistema
 
 ### Visión general
 
-LBWUS utiliza una arquitectura web basada en Django, siguiendo el patrón **Modelo–Vista–Template (MVT)**. El navegador presenta las interfaces desarrolladas con HTML, CSS y JavaScript; Django procesa las solicitudes, aplica las reglas de negocio y accede a los datos mediante sus componentes de persistencia.
+LBWUS utiliza una arquitectura web basada en Django y el patrón **Modelo–Vista–Template (MVT)**. El navegador presenta las interfaces; las vistas y servicios aplican las reglas de negocio y los permisos; el ORM gestiona la persistencia relacional.
 
-El modelo de datos documentado distingue dos responsabilidades:
+El almacenamiento distingue dos responsabilidades:
 
-- **PostgreSQL:** almacenamiento relacional y transaccional principal, incluyendo cuentas de usuario, perfiles, clases, inscripciones, reportes y solicitudes de retiro.
-- **MongoDB Atlas:** almacenamiento documental previsto para actividad, notificaciones, reseñas, conversaciones y mensajes. El esquema de estas cinco colecciones está documentado; su uso funcional se incorpora de manera progresiva.
+- **PostgreSQL:** cuentas y perfiles, apoderados y vínculos, clases y sesiones, disponibilidad, paquetes, pagos, inscripciones, retiros, mensajes, notificaciones, reseñas y soporte.
+- **MongoDB Atlas con GridFS:** archivos de video y metadatos de autor, asignatura, título y duración. La videoteca utiliza el bucket `videos`, con las colecciones `videos.files` y `videos.chunks`.
 
-El proyecto utiliza **GitHub como repositorio de control de versiones**, donde se registra el historial de modificaciones y se facilita la colaboración entre los integrantes del equipo. La aplicación se despliega mediante Railway.
+Los mensajes, las notificaciones y las reseñas cuentan con modelos Django en la base relacional.
+
+El repositorio [Haekz/Capstone](https://github.com/Haekz/Capstone) contiene la aplicación y su flujo de CI. Railway ejecuta el despliegue; este repositorio conserva los entregables académicos y su historial.
 
 ### Diagrama de arquitectura
 
 ```mermaid
 flowchart TB
-    U["Usuarios: estudiantes, profesores y administración"]
-    FE["Frontend: HTML, CSS, JavaScript y templates Django"]
-    DJ["Backend: Python / Django · vistas, autenticación y reglas de negocio"]
+    U["Usuarios con permisos por rol"]
+    FE["Interfaz y templates Django"]
+    DJ["Django vistas y servicios"]
     ORM["Django ORM"]
-    PG["PostgreSQL · base de datos principal"]
-    PY["PyMongo / app de comunidad · integración progresiva"]
-    MDB["MongoDB Atlas · colecciones documentales"]
-    TB["Transbank Webpay Plus · ambiente de pruebas"]
-    GH["GitHub · repositorio y control de versiones"]
-    RW["Railway · despliegue"]
+    PG["PostgreSQL datos de negocio"]
+    VF["Videoteca PyMongo y GridFS"]
+    MDB["MongoDB Atlas videos"]
+    WP["Transbank Webpay Plus"]
+    GH["GitHub código Haekz/Capstone"]
+    RW["Railway despliegue"]
 
-    U --> FE --> DJ
+    U --> FE
+    FE --> DJ
     DJ --> ORM
     ORM --> PG
-    DJ -. "Integración progresiva" .-> PY
-    PY -.-> MDB
-    DJ --> TB
+    DJ --> VF
+    VF --> MDB
+    DJ --> WP
+    PG -. "VideoCompartido.video_id" .-> MDB
     GH -. "Despliegue" .-> RW
     RW --> DJ
 ```
 
-**Lectura del diagrama:** las líneas continuas representan las conexiones descritas como parte de la arquitectura de la aplicación; las líneas discontinuas identifican componentes cuya integración funcional es progresiva o relaciones de despliegue. GitHub se utiliza para gestionar el repositorio y el historial de cambios, mientras que Railway ejecuta la aplicación desplegada.
+**Lectura del diagrama:** las líneas continuas representan la relación entre los componentes de la aplicación. Las líneas discontinuas identifican la referencia lógica del registro relacional al archivo de GridFS y la relación de despliegue. El diagrama resume la arquitectura implementada; la configuración efectiva de cada servicio se verifica en su entorno.
 
 ### Componentes y responsabilidades
 
 | Componente | Responsabilidad |
 | --- | --- |
-| Interfaz web | Presentar páginas, formularios y vistas para los distintos tipos de usuario. |
-| Django | Resolver solicitudes, aplicar reglas del negocio y gestionar permisos y autenticación. |
-| ORM de Django | Gestionar el acceso a los modelos relacionales. |
-| PostgreSQL | Persistir la información estructurada y transaccional del sistema. |
-| MongoDB Atlas | Recibir datos documentales de interacción cuando los módulos respectivos estén integrados. |
-| pytest | Ejecutar las pruebas automatizadas y verificar el comportamiento de las funcionalidades. |
-| Railway | Alojar y ejecutar la aplicación desplegada. |
-| Git y GitHub | Gestionar el repositorio del proyecto, controlar versiones, mantener el historial de modificaciones y facilitar el desarrollo colaborativo. |
-| Transbank | Procesar el flujo de pagos en el ambiente de integración documentado. |
+| Interfaz web | Presentar formularios, paneles y acciones según el tipo de usuario. |
+| Django | Procesar solicitudes, aplicar reglas del servicio y gestionar autenticación y permisos. |
+| ORM y PostgreSQL | Persistir las entidades de negocio, sus relaciones y las restricciones de integridad. |
+| Videoteca y GridFS | Validar, almacenar y recuperar videos de apoyo y sus metadatos. |
+| GitHub Actions | Ejecutar la comprobación de Django y las pruebas con PostgreSQL en un entorno de CI. |
+| Railway | Ejecutar la aplicación; los procesos diarios requieren configurar su servicio programado. |
+| Git y GitHub | Controlar las versiones del código y los entregables documentales en sus repositorios respectivos. |
+| Webpay Plus | Gestionar el flujo de pago y su confirmación mediante la integración con Transbank. |
 
 ### Modelo de datos e integridad
 
-La documentación técnica del modelo relacional describe **12 tablas y 13 claves foráneas**, organizadas alrededor del usuario central (`CustomUser`) y los perfiles de alumno, profesor y administrador. El sistema utiliza una entidad de inscripción para vincular alumnos con clases.
+El modelo relacional se mantiene mediante migraciones de Django. Sus entidades incluyen:
 
-Los identificadores compartidos entre PostgreSQL y MongoDB no cuentan con claves foráneas físicas entre ambas tecnologías; por ello, cualquier integración documental deberá validar la existencia y autorización de los registros relacionados desde la aplicación.
+| Área | Entidades representativas |
+| --- | --- |
+| Identidad y perfiles | `CustomUser`, `Alumno`, `Profesor`, `Apoderado` y `Vinculo`. |
+| Oferta y agenda | `Clase`, `SesionClase`, `HorarioSemanal` y `BloqueAgenda`. |
+| Contratación y reservas | `PaqueteClases`, `Suscripcion` e `Inscripcion`. |
+| Interacciones y soporte | `Conversacion`, `Mensaje`, `Notificacion`, `Resena` y `Ticket`. |
+| Videos y pagos relacionados | `VideoCompartido`, `CompraVideosExtra`, `DevolucionVideos` y `ReembolsoTransbank`. |
+
+Las reservas relacionan al alumno con una sesión y con el paquete utilizado. Los modelos de pago registran la orden, el monto, el estado y, cuando corresponde, la autorización y la fecha de confirmación.
+
+La integridad combina restricciones del modelo y servicios transaccionales: unicidad de las inscripciones activas, validaciones de fechas, cupos y precios, y uso de `transaction.atomic` y `select_for_update` en reservas y reprogramaciones.
+
+`VideoCompartido.video_id` conserva como texto el identificador del archivo en GridFS. Las referencias entre PostgreSQL y MongoDB se validan desde la aplicación; no constituyen claves foráneas entre motores ni una transacción distribuida.
+
+Fuentes del modelo: [usuarios](https://github.com/Haekz/Capstone/blob/main/alumnos/models/usuarios.py), [clases e inscripciones](https://github.com/Haekz/Capstone/blob/main/alumnos/models/clases.py), [paquetes y pagos](https://github.com/Haekz/Capstone/blob/main/alumnos/models/pagos.py), [videos compartidos](https://github.com/Haekz/Capstone/blob/main/alumnos/models/videos.py), [agenda](https://github.com/Haekz/Capstone/blob/main/agenda/models.py) y [videoteca](https://github.com/Haekz/Capstone/blob/main/user_profesor/videoteca.py).
 
 ### Estado actual y evolución
 
-De acuerdo con la documentación técnica disponible, el modelo relacional está definido, mientras que las cinco colecciones de MongoDB se encuentran creadas pero sin datos operativos. Asimismo, el esquema relacional examinado aún no incorpora una tabla transaccional de pagos. La disponibilidad horaria, las reservas con estado y otras capacidades del servicio se consideran oportunidades de evolución del modelo.
+Las reservas con estado, los paquetes y el registro de pagos forman parte del código revisado, junto con la mensajería, las reseñas, las notificaciones, los apoderados, el soporte y la videoteca. El Product Backlog y [PENDIENTES_LBWUS.md](https://github.com/Haekz/Capstone/blob/main/docs/PENDIENTES_LBWUS.md) mantienen el detalle del trabajo y las validaciones que continúan pendientes.
 
-Esta distinción evita presentar funcionalidades proyectadas como si ya estuvieran finalizadas.
+La operación se verifica separadamente de la implementación:
+
+- **Webpay:** la configuración distingue los ambientes de integración y producción. Los cobros reales requieren habilitar y validar los parámetros productivos.
+- **MongoDB Atlas:** las pruebas ordinarias utilizan mongomock. La conexión y las pruebas contra Atlas real requieren configuración específica y se identifican como integración.
+- **Menores y apoderados:** los flujos implementados deben habilitarse conforme a las decisiones y revisiones documentadas por el proyecto.
+- **Procesos diarios:** el comando `python manage.py tareas_diarias` reúne ocho tareas, comenzando por la generación de bloques de agenda. Su ejecución automática requiere configurar y verificar el Cron de Railway.
+
+La configuración operativa se documenta en [CONFIGURACION_PRODUCCION.md](https://github.com/Haekz/Capstone/blob/main/docs/CONFIGURACION_PRODUCCION.md); las reglas del servicio, en [POLITICA_PAQUETES.md](https://github.com/Haekz/Capstone/blob/main/docs/POLITICA_PAQUETES.md) y [DECISIONES_SOPORTE_Y_PAGOS.md](https://github.com/Haekz/Capstone/blob/main/docs/DECISIONES_SOPORTE_Y_PAGOS.md).
 
 ## Instalación local
 
 ### Prerrequisitos
 
-- Python 3.13+
-- `pip`
-- Git
-- PostgreSQL
-- Acceso a las variables de entorno requeridas por el proyecto.
+- Python 3.13, `pip` y Git.
+- PostgreSQL en un entorno de desarrollo.
+- Variables de entorno y configuración de los servicios que se utilizarán.
 
-El proyecto no requiere Docker para su instalación ni ejecución local.
+La instalación se realiza desde el repositorio de código de la aplicación.
 
 ### Procedimiento de referencia
 
-La instalación debe ejecutarse desde el directorio que contiene el código Django de la aplicación, utilizando la versión correspondiente del proyecto gestionada mediante GitHub.
-
-1. Clonar el repositorio de código desde GitHub y seleccionar la rama de trabajo correspondiente.
-2. Crear y activar un entorno virtual de Python.
-3. Instalar las dependencias definidas en `requirements.txt`.
-4. Configurar las variables de entorno necesarias, incluyendo la conexión a PostgreSQL, sin incorporar credenciales ni secretos al repositorio.
-5. Ejecutar las migraciones y levantar el servidor de desarrollo.
-
-Comandos de referencia, ejecutados desde la raíz del proyecto Django y después de activar el entorno virtual:
+1. Clonar el código y entrar en su directorio:
 
 ```bash
-pip install -r requirements.txt
+git clone https://github.com/Haekz/Capstone.git
+cd Capstone
+python -m venv .venv
+```
+
+2. Activar el entorno virtual:
+
+```bash
+# Linux o macOS
+source .venv/bin/activate
+```
+
+```powershell
+# Windows PowerShell
+.\.venv\Scripts\Activate.ps1
+```
+
+3. Instalar las dependencias de desarrollo y QA, que incluyen las de la aplicación:
+
+```bash
+pip install -r requirements-dev.txt
+```
+
+4. Configurar `DATABASE_URL` con una base PostgreSQL local y las variables necesarias para el entorno, siguiendo la [documentación de configuración](https://github.com/Haekz/Capstone/blob/main/docs/CONFIGURACION_PRODUCCION.md). Para utilizar los videos se requiere configurar MongoDB; las claves y credenciales se mantienen fuera del repositorio.
+
+5. Aplicar las migraciones y levantar el servidor de desarrollo:
+
+```bash
 python manage.py migrate
 python manage.py runserver
 ```
 
-La configuración específica de PostgreSQL, MongoDB, servicios externos y demás variables de entorno debe seguir la documentación técnica y las instrucciones vigentes del repositorio de código.
+En Railway se instalan las dependencias de producción de `requirements.txt`. El servidor de desarrollo y las herramientas de QA corresponden al entorno local.
 
 ## Pruebas
 
-Las pruebas automatizadas del proyecto se ejecutan con **pytest**. Para correrlas, desde la raíz del proyecto Django y con el entorno virtual activado:
+La suite puede ejecutarse con el **runner de Django** o con **pytest**, según [PRUEBAS.md](https://github.com/Haekz/Capstone/blob/main/docs/PRUEBAS.md). Ambas opciones utilizan los ajustes de pruebas del proyecto.
+
+Antes de ejecutarla:
+
+- Instalar `requirements-dev.txt` y configurar `DATABASE_URL` con PostgreSQL de desarrollo o pruebas. Django crea y elimina su base de pruebas en ese servidor; no se utiliza la conexión productiva.
+- Mantener la suite ordinaria sin una URI real de Atlas y sin la puerta `SITIO_CLAVE`, según las instrucciones de pruebas.
+- Utilizar mongomock para los casos ordinarios de MongoDB. Las pruebas de integración con Atlas se habilitan de forma explícita y separada.
+
+Comandos desde la raíz de la aplicación:
+
+```bash
+python manage.py check
+python manage.py test --noinput
+```
+
+Como alternativa de ejecución local:
 
 ```bash
 pytest
 ```
 
-Las pruebas permiten verificar el comportamiento de las funcionalidades desarrolladas en cada Sprint y detectar regresiones antes de integrar cambios al repositorio.
+El flujo de [GitHub Actions](https://github.com/Haekz/Capstone/blob/main/.github/workflows/tests.yml) se activa en `push` y `pull_request`, utiliza Python 3.13 y un servicio PostgreSQL 16, instala `requirements-dev.txt` y ejecuta la comprobación de Django y `python manage.py test --noinput`.
+
+Las pruebas automatizadas se complementan con los casos manuales de QA y las evidencias del proyecto. Sus resultados deben identificarse con la versión y el entorno en que se obtuvieron.
 
 ## Metodología de trabajo
 
